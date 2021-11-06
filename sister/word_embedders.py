@@ -11,9 +11,24 @@ from sister import download
 def get_fasttext(lang: str = "en"):
     # Download.
     urls = {
+        "be": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.be.zip",
+        "bg": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.bg.zip",
+        "cs": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.cs.zip",
         "en": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.simple.zip",
-        "ja": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.ja.zip",
+        "et": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.et.zip",
         "fr": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.fr.zip",
+        "hr": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.hr.zip",
+        "hu": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.hu.zip",
+        "hy": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.hy.zip",
+        "ja": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.ja.zip",
+        "lt": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.lt.zip",
+        "mk": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.mk.zip",
+        "pl": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.pl.zip",
+        "ro": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.ro.zip",
+        "ru": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.ru.zip",
+        "sl": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.sl.zip",
+        "sr": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.sr.zip",
+        "uk": "https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.uk.zip",
     }
     path = download.cached_download(urls[lang])
     path = Path(path)

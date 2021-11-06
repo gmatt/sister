@@ -26,9 +26,24 @@ class MeanEmbedding(SentenceEmbedding):
         word_embedder: WordEmbedding = None,
     ) -> None:
         tokenizer = tokenizer or {
+            "be": SimpleTokenizer(),
+            "bg": SimpleTokenizer(),
+            "cs": SimpleTokenizer(),
             "en": SimpleTokenizer(),
+            "et": SimpleTokenizer(),
             "fr": SimpleTokenizer(),
+            "hr": SimpleTokenizer(),
+            "hu": SimpleTokenizer(),
+            "hy": SimpleTokenizer(),
             "ja": JapaneseTokenizer(),
+            "lt": SimpleTokenizer(),
+            "mk": SimpleTokenizer(),
+            "pl": SimpleTokenizer(),
+            "ro": SimpleTokenizer(),
+            "ru": SimpleTokenizer(),
+            "sl": SimpleTokenizer(),
+            "sr": SimpleTokenizer(),
+            "uk": SimpleTokenizer(),
         }[lang]
         word_embedder = word_embedder or FasttextEmbedding(lang)
         super().__init__(tokenizer, word_embedder)
